@@ -1,0 +1,206 @@
+.contact {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  &:after {
+    content: "";
+    height: 600px;
+    width: 600px;
+    background: $color3;
+    opacity: .3;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: -10;
+    animation: contactAnim 25s alternate infinite;
+
+    @keyframes contactAnim {
+      50% {
+        transform: scale(1.4);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+
+  .form-container {
+    margin: 6% 0 0 10%;
+    max-width: 50%;
+    position: relative;
+    max-width: 300px;
+    outline: none;
+
+
+    h2 {
+      margin-bottom: 50px;
+
+      &:after {
+        content: "";
+        height: 70px;
+        width: 70px;
+        border: 1px $color4 solid;
+        border-radius: 50%;
+        position: absolute;
+        top: -22px;
+        left: 133px;
+        z-index: -1;
+      }
+    }
+
+    .form-content {
+      display: grid;
+
+      input,
+      textarea {
+        background: none;
+        font-size: 1.2rem;
+        border: none;
+        border-bottom: 1px solid $color4;
+        color: $color4;
+
+        &:focus{
+          outline: none;
+        }
+      }
+
+      input {
+        padding: 10px 6px;
+        margin-bottom: 30px;
+      }
+    }
+
+    textarea {
+      resize: none;
+      padding: 6px 0;
+      height: 70px;
+    }
+
+    input.button {
+      background: $color3;
+      height: 55px;
+      width: 126px;
+      border-radius: 50px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.2s;
+      border: none;
+    }
+  }
+
+  .formMessage {
+    p {
+      border-radius: 20px;
+      text-align: center;
+      padding: 5px 0;
+    }
+
+    .success {
+      background: $color4;
+    }
+
+    .error {
+      background: $color2;
+    }
+  }
+}
+
+.contact-infos {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  grid-template-rows: repeat(4, 23%) 12%;
+  height: 70%;
+  width: 30%;
+  max-width: 500px;
+
+  @media screen and (min-width: 1200px) {
+    width: 35%;
+    height: 83%;
+  }
+
+  @media screen and (max-width: 900px) {
+    height: 200px;
+    width: 100%;
+    max-width: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 20% 38% 40%;
+    padding-left: 10px;
+    grid-template-areas:
+      "a b c"
+      "d d d"
+      "e e f";
+  }
+
+  @media screen and (max-width: 700px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70px 70px 100px;
+    grid-template-areas:
+      "b b "
+      "c c "
+      "f f ";
+
+  }
+
+  h4 {
+    color: $color4;
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  p {
+    @media screen and (min-width: 1200px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .email .content p,
+  .phone .content p {
+    transition: 0.25s;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+
+  .address {
+    position: relative;
+
+    .content {
+      position: absolute;
+      right: 25%;
+    }
+  }
+
+  .phone {
+    position: relative;
+
+    .content {
+      position: absolute;
+      left: 20%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .email {
+    position: relative;
+
+    .content {
+      position: absolute;
+      right: 70%;
+    }
+  }
+}

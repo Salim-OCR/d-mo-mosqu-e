@@ -1,0 +1,54 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+//la font
+@font-face {
+    font-family: "font-1";
+    src: url(../../assets/fonts/JosefinSans-Medium.ttf);
+}
+
+$font-1: "font-1", sans-serif;
+
+//les variables colors
+$color1: white;
+$color2: rgb(195, 37, 37);
+$color3: gold;
+$color4: rgb(61, 122, 97);
+$color5: rgb(57, 52, 52);
+$color6: rgb(124, 207, 172);
+
+//mixin
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+a {
+    text-transform: uppercase;
+    color: $color1;
+    // margin: 10px;
+    padding: 10px;
+    // border: 1px solid;
+}
+nav{
+    height: 5vh;
+    background: $color2;
+}
+
+section{
+    height: 70vh;
+}
+
+body {
+    background: $color1 ;
+}

@@ -1,0 +1,52 @@
+footer {
+    background: $color4;
+    height: 17vh;
+    width: 95%;
+    margin: 60px auto 0;
+    color: $color1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+
+    h3 {
+        font-style: italic;
+        font-size: 2.5rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .links-socials {
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            width: 300px;
+
+            li {
+                transition: .2s ease-in-out;
+
+                i {
+                    transition: .2s ease-in-out;
+                    cursor: pointer;
+                    transform: scale(1.5);
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+        }
+
+        a {
+            text-transform: capitalize;
+
+            p {
+                position: absolute;
+                right: 15px;
+                bottom: 7px;
+            }
+        }
+
+    }
+}

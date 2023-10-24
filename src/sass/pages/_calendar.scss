@@ -1,0 +1,40 @@
+#pageCalendar{
+    width: 95%;
+    margin: 0 auto;
+    height: 150vh;
+    text-align: center;
+    
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+        li{
+            border: 1px solid transparent;
+            border-radius: 10px;
+            width: 210px;
+            height: 250px;
+            margin-bottom: 15px;
+            padding: 10px;
+
+            &:hover{
+            border: 1px solid $color4;
+            }
+            
+            .infos-calendrier-hijri{
+                margin-bottom: 10px;
+                color: $color4;
+
+            }
+
+            .timings{
+                text-align: start;
+                padding-left: 10px;
+                padding-top: 20px;
+                color: $color5;
+                
+            }
+        }
+
+    }
+}
